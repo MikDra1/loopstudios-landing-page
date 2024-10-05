@@ -1,0 +1,136 @@
+.headerMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5%;
+  padding-block: 2rem;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.headerMobileUl {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  list-style: none;
+  text-align: start;
+  justify-items: center;
+  padding-block: 1rem;
+  box-shadow: 50px 400px 22000px black;
+  border-radius: 0.3rem;
+  font-weight: 700;
+  padding-top: 12.5vh;
+}
+
+.headerMobileUlContainer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.headerMobileUl div {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  width: 90%;
+  padding-bottom: 1rem;
+  font-weight: 200;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.headerMobileUl button {
+  background-color: transparent;
+  box-shadow: none;
+  border: 3px white solid;
+  width: 90%;
+  margin-inline: auto;
+  padding-block: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  border-radius: 0.3rem;
+  font-size: 1.15rem;
+}
+
+.headerMobile img {
+  z-index: 3;
+}
+
+.mobileUlOpen.mobileUlOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.headerMobileSocials.headerMobileSocials {
+  position: absolute;
+  border-bottom: none;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.positionFixed {
+  position: fixed;
+}
+
+.headerDesktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 4rem;
+  margin-inline: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-inline: 12.5%;
+}
+
+.headerDesktop ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.headerDesktop li {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.headerDesktop li::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 1.5px;
+  transition: all 0.3s;
+}
+
+.headerDesktopEnd {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 450px) {
+  .headerDesktop li:hover::after {
+    width: 50%;
+  }
+}

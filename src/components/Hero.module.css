@@ -1,0 +1,52 @@
+.hero {
+    background-image: linear-gradient(rgba(0, 0,0, .3), rgba(0, 0,0, .3)), url('../../public/images/mobile/image-hero.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.hero h1 {
+    color: #fff;
+    border: 2px solid #fff;
+    width: 90%;
+    margin-inline: auto;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    font-size: clamp(2.6rem, 5vw, 3.5rem);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    transform: translate(-50%);
+
+}
+
+@media (min-width: 43.75rem) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0,0, .3), rgba(0, 0,0, .3)), url('../../public/images/desktop/image-hero.jpg');
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        top: 40%;
+        width: 40%;
+        margin-right: auto;
+        margin-left: 0;
+        left: 10%;
+        transform: none;
+        /* font-size: 3.5rem; */
+    }
+}
+
+@media (min-width: 43.75rem) { 
+    .hero h1 {
+        top: 29%;
+        width: 45%;
+        margin-right: auto;
+        margin-left: 0;
+        left: 12%;
+        transform: none;
+        font-size: 4.5rem;
+    }
+}

@@ -1,0 +1,63 @@
+.creation {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  margin-inline: auto;
+  cursor: pointer;
+}
+
+.creation::after, .creation::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  transition: all .3s;
+
+}
+
+.creation::after {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.creation::before {
+
+  background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7));
+  opacity: 0;
+}
+
+.creation img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.creation h3 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 2;
+  font-size: 1.5rem;
+  width: 9ch;
+  transition: all .3s;
+}
+
+
+@media (min-width: 37.5rem) {
+  .creation h3 {
+    font-size: 2rem;
+    left: 12.5%;
+    bottom: 7.5%;
+  }
+
+  .creation:hover::after {
+    opacity: 0;
+  }
+
+  .creation:hover::before {
+    opacity: 1;
+  }
+
+  .creation:hover h3 {
+    color: #000;
+  }
+}
